@@ -7,6 +7,7 @@ import { GlobalStyle } from "@/styles/GlobalStyles";
 import { WaterfallsFlowItem } from "@/pages/WaterfallsFlow";
 import { WaterfallFlow } from "@/pages/WaterfallsFlow";
 import React from "react";
+import { Layout, ResizeLayout } from "@/layout/Layout";
 
 // import { AddTask } from "@/components/Task/AddTask";
 // import { TaskList } from "@/components/Task/TaskList";
@@ -29,14 +30,26 @@ export default function Home() {
       </DeviceProvider> */}
 
       {/* 小红书瀑布流 */}
-      <div
+      {/* <div
         style={{
           display: "flex",
         }}
       >
         <div>左侧导航栏</div>
         <WaterfallFlow />
-      </div>
+      </div> */}
+
+      {/* 页面布局 */}
+      <ResizeLayout>
+        <div
+          style={{
+            display: "flex",
+          }}
+        >
+          <div>左侧导航栏</div>
+          <WaterfallFlow />
+        </div>
+      </ResizeLayout>
     </React.StrictMode>
   );
 }
